@@ -6,8 +6,9 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import requests
 from movie_api import get_movies
+import os
 
-api_key = "af5a744440bd1b9defc86acf28484561"
+api_key = os.environ.get('API_KEY')
 API_URL = "https://api.themoviedb.org/3/search/movie?"
 MOVIE_DB_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
 
